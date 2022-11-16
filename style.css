@@ -1,0 +1,16 @@
+#register {
+    text-align: center;
+    background-color: gainsboro;
+    border: 2px solid black;
+    padding: 10px;
+    
+}
+.insideDiv {
+
+}
+#log {
+    text-align: center;
+    background-color: gainsboro;
+    border: 2px solid black;
+    padding: 10px;
+}
