@@ -25,7 +25,7 @@ class User {
 
     public function login() : bool {
         $query = "SELECT * FROM user WHERE login = ? LIMIT 1";
-        $db = new mysqli('localgost', 'root', '', 'loginform');
+        $db = new mysqli('localhost', 'root', '', 'loginform');
         $preparedQuery = $db->prepare($query);
         $preparedQuery->bind_param('s', $this->login);
         $preparedQuery->execute();
