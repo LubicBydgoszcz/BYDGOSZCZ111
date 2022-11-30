@@ -10,11 +10,13 @@ Route::add('/', function() {
 });
 
 Route::add('/login', function() {
-    echo "strona logowania";
+    global $twig;
+    $twig->display('login.html.twig');
 });
 
 Route::add('/register', function() {
-    echo "strona rejestracji";
+    global $twig;
+    $twig->display('register.html.twig');
 });
 
 Route::run('/BYDGOSZCZ111');
