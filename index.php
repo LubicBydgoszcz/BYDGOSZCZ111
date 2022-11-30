@@ -1,13 +1,21 @@
 <?php
+
+use Steampixel\Route;
+
 require_once('config.php');
 require_once('class/User.class.php');
 
-$user = new User('jkowalski', 'tajneHasło');
+Route::add('/', function() {
+    echo "strona główna";
+});
 
-if($user->login()) {
-    echo "Zalogowano poprawnie";
-}
-else {
-    echo "Błędny login lub hasło";
-}
+Route::add('/login', function() {
+    echo "strona logowania";
+});
+
+Route::add('/register', function() {
+    echo "strona rejestracji";
+});
+
+Route::run('/BYDGOSZCZ111');
 ?>
