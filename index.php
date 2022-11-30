@@ -31,7 +31,7 @@ Route::add('/login', function() {
         if($user->login()) {
             $_SESSION['auth'] = true;
             $_SESSION['user'] = $user;
-            $twig->display('message.html.twig', ['message' => "Zalogowano pomyślnie użytkownika"]);
+            $twig->display('home.html.twig', ['message' => "Zalogowano pomyślnie użytkownika: " .$user->getName()]);
         } else {
             $twig->display('login.html.twig', ['message' => "Błędny login lub hasło!"]);
         }
